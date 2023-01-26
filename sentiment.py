@@ -1,6 +1,6 @@
+pip install transformers[sentencepiece] datasets
 from transformers import pipeline
 
-classifier = pipeline("sentiment-analysis",   
-                      "blanchefort/rubert-base-cased-sentiment")
+translate = pipeline('translation', "Helsinki-NLP/opus-mt-ru-en")
 
-print(classifier("Я обожаю инженерию машинного обучения!"))
+print(translate("Это мое первое задание"))
